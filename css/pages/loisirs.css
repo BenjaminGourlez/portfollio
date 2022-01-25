@@ -1,0 +1,155 @@
+/*
+    MEDIAQUERIES
+
+    ZONE TELEPHONE          = 0 -- 600PX
+    ZONE TABLETTE PORTRAIT  = 600 -- 900PX
+    ZONE TABLETTE PAYSAGE   = 900 -- 1200PX
+    ZONE BUREAU STANDARD    = 1200 -- 1800PX
+    ZONE GRAND BUREAU       = 1800PX & +
+
+*/
+
+/*
+    GUIDE TAILLE --- SOURCE : https://codebeautify.org/percent-to-rem-converter
+
+    1em / 1rem === 100% === 16px === 12pt
+    37.5em === 3750% === 600px === 450.01pt
+    56.25em === 5625% === 900px === 675.02pt
+    75em === 7500% === 1200px === 900.02pt
+    112.5em === 11250% === 1800px === 1350.03pt
+
+*/
+
+/*
+    IMPORTATION DE POLICES
+*/
+
+/* Montserrat */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap");
+
+/*
+    DEBUT DU CODE
+*/
+
+/*
+    COULEURS GLOBALES
+*/
+
+:root {
+  --grey-background: #38444c;
+  --background: rgb(248, 224, 172);
+  --blue-table: #add8e6;
+  --white: #ffffff;
+}
+
+.loisirs-sect {
+  background-color: var(--grey-background);
+  min-height: 25rem;
+  max-height: 50rem;
+  position: relative;
+}
+
+.loisirs-cnt {
+  position: absolute;
+  margin-top: 15rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90rem;
+  width: 92%;
+}
+
+.loisirs-cnt h1 {
+  color: red;
+  font-family: "Mochiy Pop P One", "Times New Roman", Arial sans-serif;
+  font-size: 5.8rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+section {
+  background-color: var(--grey-background);
+}
+
+.loisirs-cards {
+  min-height: 100rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.cards {
+  cursor: pointer;
+  padding-top: 6rem;
+  background-color: transparent;
+  height: 24rem;
+  margin-left: 10%;
+  width: 80%;
+  margin-bottom: 3rem;
+}
+
+.cards h3 {
+  font-size: 2rem;
+}
+
+.cards p {
+  padding-top: 16px;
+  font-size: 0.9rem;
+}
+
+.cards-txt{
+  padding-top: 4rem;
+}
+
+.down-arrow {
+  width: 40px;
+  height: 40px;
+  background-image: url("../../images/icons/double_arrow_white.png");
+  margin-left: 50%;
+  background-repeat: no-repeat;
+  
+}
+
+.dev-card {
+  background-image: url("../../images/loisirs/developpement_app.png");
+  background-repeat: no-repeat;
+  background-size: 16%;
+  background-position-x: 3.12%;
+  background-position-y: center;
+}
+
+.photo-card {
+  background-image: url("../../images/loisirs/photogarphie.png");
+  background-repeat: no-repeat;
+  background-size: 16%;
+  background-position-x: 3.12%;
+  background-position-y: center;
+}
+
+.adminsys-card {
+  background-image: url("../../images/loisirs/laptop.png");
+  background-repeat: no-repeat;
+  background-size: 16%;
+  background-position-x: 3.12%;
+  background-position-y: center;
+}
+
+
+@media only screen and (max-width: 75em) {
+  :root {
+    font-size: 59%;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  :root {
+    font-size: 56%;
+  }
+}
+
+@media only screen and (min-width: 112.5em) {
+  :root {
+    font-size: 65%;
+  }
+}

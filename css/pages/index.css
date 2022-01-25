@@ -1,0 +1,256 @@
+/*
+    MEDIAQUERIES
+
+    ZONE TELEPHONE          = 0 -- 600PX
+    ZONE TABLETTE PORTRAIT  = 600 -- 900PX
+    ZONE TABLETTE PAYSAGE   = 900 -- 1200PX
+    ZONE BUREAU STANDARD    = 1200 -- 1800PX
+    ZONE GRAND BUREAU       = 1800PX & +
+
+*/
+
+/*
+    GUIDE TAILLE --- SOURCE : https://codebeautify.org/percent-to-rem-converter
+
+    1em / 1rem === 100% === 16px === 12pt
+    37.5em === 3750% === 600px === 450.01pt
+    56.25em === 5625% === 900px === 675.02pt
+    75em === 7500% === 1200px === 900.02pt
+    112.5em === 11250% === 1800px === 1350.03pt
+
+*/
+
+/*
+    IMPORTATION DE POLICES
+*/
+
+/* Lobster Two */
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700");
+
+/*Mochiy Pop P One*/
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap");
+
+/* Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/*
+    DEBUT DU CODE
+*/
+
+/*
+    COULEURS GLOBALES
+*/
+
+:root {
+  --grey-background: #38444c;
+  --about-background: rgb(235,219,185);
+  --blue-table: #add8e6;
+  --white: #ffffff;
+}
+
+/*
+  STYLE DE LA PRESENTATION
+*/
+
+.presentation {
+  background-color: var(--grey-background);
+  height: 100vh;
+  min-height: 80rem;
+  max-height: 120rem;
+  position: relative;
+}
+
+.pres-cnt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90rem;
+  width: 92%;
+}
+
+.pres-cnt h1 {
+  color: white;
+  font-family: "Mochiy Pop P One", "Times New Roman",
+    Arial sans-serif;
+  font-size: 5.8rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.pres-txt {
+  font-family: "Mochiy Pop P One", "Times New Roman", Arial, sans-serif;
+  margin: 6rem auto 0 auto;
+  max-width: 80rem;
+  color: white;
+  font-size: 1.8rem;
+  text-align: center;
+  width: 100%;
+  line-height: 1.6;
+}
+
+/*
+  CSS FLECHE
+*/
+
+.down-arrow {
+  width: 40px;
+  height: 40px;
+  background-image: url("../../images/icons/double_arrow_white.png");
+  position: relative;
+  overflow: hidden;
+  position: absolute;
+  bottom: 6%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*
+    MEDIAQUERIES PRESENTATION DIV
+*/
+
+@media only screen and (max-width: 37.5em) {
+  .pres-cnt {
+    padding: 30rem 0 13rem 0;
+    margin: auto;
+    position: static;
+    transform: translate(0, 0);
+  }
+
+  .pres-cnt h1 {
+    font-size: 4.5rem;
+  }
+
+  .pres-txt {
+    font-size: 2rem;
+  }
+}
+
+/*
+    STYLE A PROPOS DE MOI
+*/
+
+.sn-aboutme {
+  background-color: var(--about-background);
+  height: 96vh;
+  min-height: 80rem;
+  max-height: 120rem;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-size: 2.8rem;
+  text-align: center;
+  position: relative;
+}
+
+.sn-aboutme .aboutme-title {
+  font-size: 3rem;
+  padding-top: 5rem;
+  margin-bottom: 1em;
+  font-family: "Poppins", "Times New Roman", Arial, sans-serif;
+}
+
+.about-aside table {
+  border-collapse: collapse;
+  font-size: 0.9em;
+  border-bottom: 4px solid #add8e6;
+  border-left: 4px solid #add8e6;
+  border-right: 4px solid #add8e6;
+}
+
+.about-aside table caption {
+  background-color: #add8e6;
+}
+
+.about-aside table tbody tr .box-label {
+  font-size: 2rem;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: left;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.about-aside table tbody tr .box-value {
+  font-size: 2rem;
+  text-align: right;
+  white-space: nowrap;
+  vertical-align: middle;
+  white-space: normal;
+}
+
+.about-aside table tbody tr .box-label-contact {
+  background-color: #add8e6;
+  text-align: center;
+  margin: 0px;
+  border-left: 4px solid #add8e6;
+  border-right: 4px solid #add8e6;
+}
+
+.about-cnt aside {
+  width: 50%;
+  padding-left: 0.5rem;
+  margin-left: 0.5rem;
+  float: right;
+  font-style: italic;
+  color: var(--blue_table);
+}
+
+.about-cnt aside > p {
+  margin: 2rem;
+}
+
+.description {
+  font-family: "Mochiy Pop P One", "Times New Roman", Arial, sans-serif;
+  padding-left: 5%;
+  padding-right: 5%;
+  max-width: 80rem;
+  color: black;
+  font-size: 1.8rem;
+  text-align: left;
+  width: 100%;
+  line-height: 1.6;
+}
+
+
+
+
+/*
+    A PROPOS MEDIAQUERIES
+*/
+
+@media only screen and (max-width: 37.5em) {
+  .about-cnt aside {
+    width: unset;
+    padding-left: unset;
+    margin-left: unset;
+    margin-bottom: 1rem;
+    float: unset;
+    box-shadow: unset;
+    font-style: unset;
+    color: var(--blue_table);
+  }
+
+  .about-cnt aside > p {
+    margin: 16px;
+  }
+
+  .about-cnt p {
+    font-family: "Mochiy Pop P One", "Times New Roman", Arial, sans-serif;
+  }
+
+}
+
+@media only screen and (max-width: 700px) {
+  .sn-aboutme {
+    height: 148vh;
+    min-height: 80rem;
+    max-height: 200rem;
+  }
+
+  .aboutme-title {
+    font-size: 2rem;
+    margin-bottom: 8rem;
+  }
+
+}

@@ -1,0 +1,264 @@
+/*
+    MEDIAQUERIES
+
+    ZONE TELEPHONE          = 0 -- 600PX
+    ZONE TABLETTE PORTRAIT  = 600 -- 900PX
+    ZONE TABLETTE PAYSAGE   = 900 -- 1200PX
+    ZONE BUREAU STANDARD    = 1200 -- 1800PX
+    ZONE GRAND BUREAU       = 1800PX & +
+
+*/
+
+/*
+    GUIDE TAILLE --- SOURCE : https://codebeautify.org/percent-to-rem-converter
+
+    1em / 1rem === 100% === 16px === 12pt
+    37.5em === 3750% === 600px === 450.01pt
+    56.25em === 5625% === 900px === 675.02pt
+    75em === 7500% === 1200px === 900.02pt
+    112.5em === 11250% === 1800px === 1350.03pt
+
+*/
+
+/*
+    IMPORTATION DE POLICES
+*/
+
+/* Montserrat */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap");
+
+/* Source Sans Pro */
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap");
+
+/* Lobster Two */
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700");
+
+/*
+    DEBUT DU CODE
+*/
+
+/*
+    STYLES GLOBAL
+*/
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: inherit;
+}
+
+:root {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+@media only screen and (max-width: 75em) {
+  :root {
+    font-size: 59%;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  :root {
+    font-size: 56%;
+  }
+}
+
+@media only screen and (min-width: 112.5em) {
+  :root {
+    font-size: 65%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+  position: relative;
+  line-height: 1.5;
+  font-family: sans-serif;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  font-family: "Sans Pro", Arial, Helvetica, sans-serif;
+}
+
+a {
+  font-family: 'Montserrat', 'Times New Roman', Times, sans-serif;
+  text-decoration: none;
+  color: inherit;
+}
+
+.header li {
+  list-style: none;
+}
+
+input:focus,
+button:focus,
+a:focus,
+textarea:focus {
+  outline: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+textarea {
+  resize: none;
+}
+
+/*
+  HEADER
+*/
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  background: #38444c;
+  box-shadow: 0 10px 100px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .header-content {
+    padding: 0 2rem;
+  }
+}
+
+/*
+  CSS DE L'ICONE ET DU TEXTE
+*/
+
+.header-logo-cont {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  transition: color 0.3s;
+}
+
+.header-logo-cont:hover {
+  color: #f2dcc7;
+}
+
+.header-img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50px;
+  overflow: hidden;
+  margin-right: 1.5rem;
+}
+
+@media only screen and (min-width: 56.25em) {
+  .header-img {
+    width: 4.5rem;
+    height: 4.5rem;
+    margin-right: 1.2rem;
+  }
+}
+
+.header-pp {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.header-img-txt {
+  font-family: 'Montserrat', 'Times New Roman', Times, sans-serif;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/*
+  CSS DES LIENS DU MENU
+*/
+
+.header-links {
+  display: flex;
+}
+
+@media only screen and (max-width: 41em) {
+  .header-links {
+    display: none;
+  }
+}
+
+.header-li-link {
+  padding: 2.2rem 3rem;
+  display: inline-block;
+  font-size: 1.6rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  transition: color 0.3s;
+}
+
+.header-li-link:hover {
+  color: rgb(102, 255, 135);
+  text-decoration: underline dashed;
+  
+  text-underline-offset: 8px;
+}
+
+
+@media only screen and (max-width: 56.25em) {
+  .header-li-link {
+    padding: 3rem 1.8rem;
+    font-size: 1.5rem;
+  }
+}
+
+/* menu button */
+
+@media only screen and (max-width: 41em) {
+  .header-menu-btn {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 101;
+  }
+  .header-menu-btn > span {
+    background-color: #fff;
+    border-radius: 1px;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -1px 0 0 -15px;
+  }
+  .header-menu-btn > span:after,
+  .header-menu-btn > span:before {
+    content: "";
+    background-color: #fff;
+    border-radius: 1px;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    margin-left: -15px;
+  }
+  .header-menu-btn > span:after {
+    top: -7px;
+  }
+  .header-menu-btn > span:before {
+    bottom: -7px;
+  }
+}
+

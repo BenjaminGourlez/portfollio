@@ -1,0 +1,136 @@
+/*
+    MEDIAQUERIES
+
+    ZONE TELEPHONE          = 0 -- 600PX
+    ZONE TABLETTE PORTRAIT  = 600 -- 900PX
+    ZONE TABLETTE PAYSAGE   = 900 -- 1200PX
+    ZONE BUREAU STANDARD    = 1200 -- 1800PX
+    ZONE GRAND BUREAU       = 1800PX & +
+
+*/
+
+/*
+    GUIDE TAILLE --- SOURCE : https://codebeautify.org/percent-to-rem-converter
+
+    1em / 1rem === 100% === 16px === 12pt
+    37.5em === 3750% === 600px === 450.01pt
+    56.25em === 5625% === 900px === 675.02pt
+    75em === 7500% === 1200px === 900.02pt
+    112.5em === 11250% === 1800px === 1350.03pt
+
+*/
+
+/*
+    IMPORTATION DE POLICES
+*/
+
+/* Source Sans Pro */
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap");
+
+/* Lobster Two */
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700");
+
+/*
+    DEBUT DU CODE
+*/
+
+:root {
+  --grey_background: #38444c;
+  --beige: #ffdfb8;
+  --white: #ffffff;
+}
+
+.main-footer {
+  background: var(--grey_background);
+  color: #222;
+}
+
+.footer-up-content {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 8rem;
+  background-color: var(--grey_background);
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .footer-up-content {
+    padding: 6rem 0;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .footer-up-content {
+    display: block;
+  }
+}
+
+.footer-content-row1 {
+  order: 2;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .footer-content-row1 {
+    margin-bottom: 5rem;
+  }
+}
+.footer-content-row2 {
+  width: 40%;
+  order: 1;
+  max-width: 50rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .footer-content-row2 {
+    width: 100%;
+  }
+}
+
+.footer-desc {
+  margin-top: 2rem;
+  color: var(--beige);
+  font-size: 1.5rem;
+  line-height: 1.7;
+}
+.footer-social-div {
+  margin-top: 2rem;
+}
+
+.footer-icons {
+  margin-right: 2rem;
+  width: 2.5rem;
+}
+
+.footer-down {
+  padding: 4rem 0;
+  border-top: 1px solid var(--beige);
+  background-color: var(--grey_background);
+  color: var(--beige);
+  font-size: 1.2rem;
+  text-align: left;
+  text-align: center;
+}
+
+.footer-down a {
+  text-decoration: underline;
+  font-weight: bold;
+  margin-left: 2px;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .footer-down {
+    padding: 3.5rem 0;
+  }
+}
+
+.footer-content-row2 h4{
+  color: var(--beige);
+  font-size: 2rem;
+}
+
+.footer-content-row1 h2{
+  color: var(--beige);
+  font-size: 2rem;
+  margin-right: 2rem;
+}

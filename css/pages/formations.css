@@ -1,0 +1,189 @@
+/*
+    MEDIAQUERIES
+
+    ZONE TELEPHONE          = 0 -- 600PX
+    ZONE TABLETTE PORTRAIT  = 600 -- 900PX
+    ZONE TABLETTE PAYSAGE   = 900 -- 1200PX
+    ZONE BUREAU STANDARD    = 1200 -- 1800PX
+    ZONE GRAND BUREAU       = 1800PX & +
+
+*/
+
+/*
+    GUIDE TAILLE --- SOURCE : https://codebeautify.org/percent-to-rem-converter
+
+    1em / 1rem === 100% === 16px === 12pt
+    37.5em === 3750% === 600px === 450.01pt
+    56.25em === 5625% === 900px === 675.02pt
+    75em === 7500% === 1200px === 900.02pt
+    112.5em === 11250% === 1800px === 1350.03pt
+
+*/
+
+/*
+    IMPORTATION DE POLICES
+*/
+
+/* Montserrat */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap");
+/*
+    DEBUT DU CODE
+*/
+
+/*
+    COULEURS GLOBALES
+*/
+
+:root {
+  --grey-background: #38444c;
+  --background: rgb(248, 224, 172);
+  --blue-table: #add8e6;
+  --white: #ffffff;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.text {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90rem;
+  width: 92%;
+}
+
+.text h1 {
+  color: white;
+  font-family: "Mochiy Pop P One", "Times New Roman",
+    Arial sans-serif;
+  font-size: 5.8rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.timeline-sec {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32rem 0;
+  background-color: var(--grey-background);
+}
+
+.timeline {
+  width: 80%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline ul {
+  list-style: none;
+}
+
+.timeline ul li {
+  padding: 20px;
+  background-color: var(--background);
+  color: black;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.timeline ul li:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-txt h1 {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+.timeline-txt p {
+  font-family: "Montserrat";
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.timeline-txt .date {
+  font-family: "Montserrat";
+  color : white;
+  font-size: 12px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+@media only screen and (min-width: 768px) {
+  .timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: grey;
+  }
+  
+  .timeline ul li {
+    width: 50%;
+    position: relative;
+    margin-bottom: 50px;
+  }
+  
+  .timeline ul li:nth-child(odd) {
+    float: left;
+    clear: right;
+    transform: translateX(-30px);
+    border-radius: 30px 0px 30px 30px;
+  }
+  
+  .timeline ul li:nth-child(even) {
+    float: right;
+    clear: left;
+    transform: translateX(30px);
+    border-radius: 0px 30px 30px 30px;
+  }
+  
+  .timeline ul li::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: gray;
+    top: 0px;
+  }
+  
+  .timeline ul li:nth-child(odd)::before {
+    transform: translate(50%, -50%);
+    right: -30px;
+  }
+  .timeline ul li:nth-child(even)::before {
+    transform: translate(-50%, -50%);
+    left: -30px;
+  }
+  
+  .timeline-txt .date {
+    position: absolute;
+    top: -30px;
+  }
+  
+  .timeline ul li:hover::before {
+    background-color: rgb(47, 159, 211);
+  }
+
+}
